@@ -9,7 +9,7 @@ class ListCategoriesUseCase {
     const categories = this.categoriesRepository.list();
 
     return categories;
-  }
+  }a
 }
 
 
