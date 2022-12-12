@@ -11,7 +11,7 @@ export const PostgresDataSource = new DataSource({
   synchronize: false,
   name: 'default',
   migrations: ["./src/database/migrations/*.ts"],
-  entities: ["./src/database/migrations/*.ts"],
+  entities: ["./src/modules/**/entities/*.ts"],
 })
 
 PostgresDataSource.initialize()
@@ -21,3 +21,4 @@ PostgresDataSource.initialize()
     .catch((err) => {
         console.error("Error during Data Source initialization", err)
     })
+
