@@ -32,10 +32,13 @@ class ImportCategoryUseCase {
         resolve(categories)
       })
       .on("error", (err) => {
-        reject(err);
+        reject(err => {
+          throw new Error(err);
+        });;
       });
-    });
-  }
+    })
+  };
+
 
   async execute(file: Express.Multer.File): Promise <void> {
     const categories = await this.loadCategories(file);
