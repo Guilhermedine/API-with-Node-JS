@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from "express"
+import { NextFunction, request, Request, Response } from "express"
 import { verify } from "jsonwebtoken"
 import { UsersRepository } from "../modules/accounts/repositories/implementations/UsersRepository";
 import { AppError } from "../errors/AppError"
@@ -28,6 +28,10 @@ export async function ensureAuthenticated(req: Request, res: Response, next: Nex
     throw new AppError("User does not exists!", 401)
   }
   
+  request.user = {
+    id: user_id
+  }
+
   next();
   } catch {
     throw new AppError("Invalid token!", 401)
