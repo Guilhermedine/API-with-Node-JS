@@ -1,7 +1,7 @@
-import { Category } from '@modules/cars/infra/typeorm/entities/Category'
+import { Category } from '../../typeorm/entities/Category'
 import { ICategoriesRepository, ICreateCategoryDTO } from '../../../repositories/ICategoriesRepository';
 import { Repository } from 'typeorm';
-import { PostgresDataSource } from '../../../../../database/ormconfig'
+import { PostgresDataSource } from '@shared/infra/typeorm/ormconfig'
 
 
 

@@ -3,10 +3,10 @@ import express, { Request, Response, NextFunction} from 'express';
 import "express-async-errors"
 import swaggerUi from 'swagger-ui-express';
 import { router } from './routes';
-import swaggerFile from './swagger.json';
-import './database/ormconfig'
+import swaggerFile from 'swagger.json';
+import '../typeorm/ormconfig'
 import '@shared/container';
-import { AppError } from '@errors/AppError';
+import { AppError } from '../../errors/AppError';
 
 
 

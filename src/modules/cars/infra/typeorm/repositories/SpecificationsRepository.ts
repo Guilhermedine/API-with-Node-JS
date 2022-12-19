@@ -1,7 +1,7 @@
 import { Repository } from 'typeorm';
-import { Specification } from '@modules/cars/infra/typeorm/entities/Specification';
+import { Specification } from "../../typeorm/entities/Specification";
 import { ISpecificationsRepository, ICreateSpecificationDTO } from '../../../repositories/ISpecificationsRepository'
-import { PostgresDataSource } from '../../../../../database/ormconfig'
+import { PostgresDataSource } from '@shared/infra/typeorm/ormconfig'
 
 
 class SpecificationsRepository implements ISpecificationsRepository {

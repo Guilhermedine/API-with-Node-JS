@@ -1,8 +1,8 @@
 import { IUserRepository } from '../../../repositories/IUserRepository';
 import { ICreateUserDTO } from '../../../dtos/ICreateUserDTO';
-import { User } from '@modules/accounts/infra/typeorm/entities/User';
+import { User } from "../../typeorm/entities/User";
 import { Repository } from 'typeorm';
-import { PostgresDataSource } from '../../../../../database/ormconfig';
+import { PostgresDataSource } from '@shared/infra/typeorm/ormconfig';
 
 
 
