@@ -1,8 +1,8 @@
-import { UsersRepository } from '@modules/accounts/repositories/implementations/UsersRepository';
+import { UsersRepository } from '@modules/accounts/infra/typeorm/repositories/UsersRepository';
 import { IUserRepository } from '@modules/accounts/repositories/IUserRepository';
 import { ICategoriesRepository } from '@modules/cars/repositories/ICategoriesRepository';
-import { CategoriesRepository } from '@modules/cars/repositories/Implementations/CategoriesRepository';
-import { SpecificationsRepository } from '@modules/cars/repositories/Implementations/SpecificationsRepository';
+import { CategoriesRepository } from '@modules/cars/infra/typeorm/repositories/CategoriesRepository';
+import { SpecificationsRepository } from '@modules/cars/infra/typeorm/repositories/SpecificationsRepository';
 import { ISpecificationsRepository } from '@modules/cars/repositories/ISpecificationsRepository';
 import { container } from 'tsyringe'
 
