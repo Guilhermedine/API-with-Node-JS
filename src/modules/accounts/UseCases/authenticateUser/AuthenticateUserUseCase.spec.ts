@@ -1,6 +1,6 @@
-import { AppError } from "../../../../errors/AppError";
-import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
-import { UsersRepositoryInMemory } from "../../repositories/in-memory/UsersRepositoryInMemory"
+import { AppError } from "@errors/AppError";
+import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
+import { UsersRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersRepositoryInMemory";
 import { CreateUserUseCase } from "../createUser/CreateUserUsecase";
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase"
 
@@ -52,14 +52,14 @@ describe("Authenticate User", ()=> {
         email: "user@user.com",
         password: "1234",
         name: "User Test Error"
-      }
+      };
 
       await createUserUseCase.execute(user);
 
       await authenticateUserUseCase.execute({
         email: user.email,
         password: "incorrectPassword"
-      })
-    }).rejects.toBeInstanceOf(AppError)
-  })
+      });
+    }).rejects.toBeInstanceOf(AppError);
+  });
 });

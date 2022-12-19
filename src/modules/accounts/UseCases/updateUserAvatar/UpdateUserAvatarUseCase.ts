@@ -1,6 +1,8 @@
+import { IUserRepository } from "@modules/accounts/repositories/IUserRepository";
+import { deleteFile } from "@utils/file";
 import { inject, injectable } from "tsyringe";
-import { IUserRepository } from "../../repositories/IUserRepository";
-import { deleteFile } from "../../../../utils/file"
+
+
 
 
 
